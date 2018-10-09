@@ -17,6 +17,6 @@ class UsersAPIController extends Controller
     {
         $users = User::orderBy('created_at', 'asc')->get();
 
-        return Response(["success" => true, 'message' => 'User list.', 'users' => $users->toArray()]);
+        return Response(["success" => true, 'message' => 'Users list.', 'payload' => ['users' => $users->toArray()]]);
     }
 }
