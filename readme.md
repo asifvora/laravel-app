@@ -55,7 +55,6 @@ $ php artisan migrate
 $ php artisan config:clear
 ```
 
-
 #### 9. Cache clear
 
 ```sh
