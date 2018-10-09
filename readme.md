@@ -28,10 +28,22 @@ Laravel has the most extensive and thorough [documentation](https://laravel.com/
 If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 1100 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
 
 ## Laravel run
-`php artisan migrate`
-`php artisan serve`
-`http://localhost:8000`
 
+```sh
+$ composer update
+```
+
+```sh
+$ php artisan migrate
+```
+
+```sh
+$ php artisan serve
+```
+
+```sh
+$ http://localhost:8000
+```
 
 ## Laravel Sponsors
 
