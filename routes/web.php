@@ -17,6 +17,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::get('/react/{path?}', [
+    'uses' => 'FrontController@index',
+    'as' => 'react',
+    'where' => ['path' => '.*']
+]);
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/users', 'UsersController@index')->name('users');
 Route::delete('/users/{id}', 'UsersController@delete')->name('users');
