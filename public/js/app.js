@@ -36214,17 +36214,17 @@ var Example = function (_Component) {
                     { key: user.id },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'td',
-                        null,
+                        { className: 'table-text' },
                         user.id
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'td',
-                        null,
+                        { className: 'table-text' },
                         user.name
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         'td',
-                        null,
+                        { className: 'table-text' },
                         user.email
                     )
                 );
@@ -36243,47 +36243,76 @@ var Example = function (_Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+                { className: 'py-4' },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'center',
-                    null,
+                    'div',
+                    { className: 'container' },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'h2',
-                        null,
-                        'Laravel ReactJS App'
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'table',
-                    { className: 'table' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'thead',
-                        null,
+                        'div',
+                        { className: 'row justify-content-center' },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'tr',
-                            null,
+                            'div',
+                            { className: 'col-md-8' },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'th',
+                                'center',
                                 null,
-                                'ID'
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'h2',
+                                    null,
+                                    'Laravel ReactJS App'
+                                )
                             ),
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'th',
-                                null,
-                                'Name'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'th',
-                                null,
-                                'Email'
+                                'div',
+                                { className: 'card' },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'card-header' },
+                                    'Users'
+                                ),
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    'div',
+                                    { className: 'card-body' },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div', { className: 'panel panel-default' }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        'div',
+                                        { className: 'panel-body' },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            'table',
+                                            { className: 'table' },
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'thead',
+                                                null,
+                                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                    'tr',
+                                                    null,
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'th',
+                                                        null,
+                                                        'ID'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'th',
+                                                        null,
+                                                        'Name'
+                                                    ),
+                                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                        'th',
+                                                        null,
+                                                        'Email'
+                                                    )
+                                                )
+                                            ),
+                                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                                'tbody',
+                                                null,
+                                                this.renderUsers()
+                                            )
+                                        )
+                                    )
+                                )
                             )
                         )
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'tbody',
-                        null,
-                        this.renderUsers()
                     )
                 )
             );
