@@ -18,9 +18,24 @@
         instructions how to enable JavaScript in your web browser</a>.
     </noscript>
     <main id="appMain" class="main-section">
-        <div id="demo-app"></div> 
+        <div id="demo-app"></div>
         <script src="{{ mix('js/app.js')}}"></script>
-    </main>   
+    </main>
     <!-- Scripts -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register("{{ asset('service-worker.js') }}").then(function(registration) {
+            console.log('Service Worker registration successful', registration.scope);
+          }, function(err) {
+            console.log('Service Worker registration failed', err);
+          }).catch(function(err) {
+            console.log(err);
+          });
+        });
+      } else {
+        console.log('Service Worker is not supported by browser.');
+      }
+    </script>
 </body>
 </html>

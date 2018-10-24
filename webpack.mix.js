@@ -1,4 +1,6 @@
-let mix = require('laravel-mix');
+const mix = require('laravel-mix');
+const workboxPlugin = require('workbox-webpack-plugin');
+const generateSWPlugin = new workboxPlugin.GenerateSW({ clientsClaim: true, skipWaiting: true });
 
 /*
  |--------------------------------------------------------------------------
@@ -12,4 +14,7 @@ let mix = require('laravel-mix');
  */
 
 mix.react('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+    .sass('resources/sass/app.scss', 'public/css')
+    .webpackConfig({
+        plugins: [generateSWPlugin]
+    });
