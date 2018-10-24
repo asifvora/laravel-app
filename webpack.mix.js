@@ -16,5 +16,8 @@ const generateSWPlugin = new workboxPlugin.GenerateSW({ clientsClaim: true, skip
 mix.react('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .webpackConfig({
-        plugins: [generateSWPlugin]
+        plugins: [generateSWPlugin],
+        output: {
+            publicPath: ''
+        }
     });

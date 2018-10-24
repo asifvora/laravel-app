@@ -22,20 +22,18 @@
         <script src="{{ mix('js/app.js')}}"></script>
     </main>
     <!-- Scripts -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-          navigator.serviceWorker.register("{{ asset('service-worker.js') }}").then(function(registration) {
-            console.log('Service Worker registration successful', registration.scope);
-          }, function(err) {
-            console.log('Service Worker registration failed', err);
-          }).catch(function(err) {
-            console.log(err);
-          });
-        });
-      } else {
-        console.log('Service Worker is not supported by browser.');
-      }
-    </script>
+    <script type="text/javascript">
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register("{{ asset('service-worker.js') }}").then(registration => {
+                    console.log('SW registered');
+                }).catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+            });
+        } else {
+            console.log('Service Worker is not supported by browser.');
+        }
+   </script>
 </body>
 </html>
